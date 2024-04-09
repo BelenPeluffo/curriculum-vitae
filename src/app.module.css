@@ -12,16 +12,31 @@ body {
   background-color: var(--light-secondary);
 }
 
+ul {
+  margin-block-start: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content:start;
+  /* list-style-image: url('./assets/images/circle1.svg'); */
+}
+
 .profilePic {
   border-radius: 50%;
   width: 200px;
   height: 200px;
 }
 
+.itemContainer {
+    padding-bottom: 16px;
+}
+
 .rotatedText,
 .cardName,
 .cardTitle,
-.contactItemText {
+.contactItemText,
+.sectionTitle,
+.itemContainer {
   transform: rotate(-5deg);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -55,17 +70,19 @@ body {
 
 .contactItemIcon,
 .annotationTitle,
-.annotationSubtitle,
-ul {
+.annotationSubtitle {
   color: var(--brand-orange);
 }
 
-ul {
-  margin-block-start: 0;
-  padding-left: 20px;
-  list-style-type: circle;
+.sectionTitle {
+  color: var(--light-secondary);
+  background-color: var(--brand-orange);
+  padding: 4px 8px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: fit-content;
 }
 
-li {
-  color: black;
+.itemDescription {
+  font-size: var(--small-size);
 }
