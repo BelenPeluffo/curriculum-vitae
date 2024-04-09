@@ -13,6 +13,7 @@ const Home = () => {
           photo={profilePic}
         />
         <ContactItem value="ítem cualquiera" />
+        <ContactItem value="ítem cualquiera" label={"etiqueta"}/>
     </div>
   );
 };
