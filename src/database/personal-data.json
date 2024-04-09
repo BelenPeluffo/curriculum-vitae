@@ -1,0 +1,14 @@
+{
+  "name": "Belén Peluffo",
+  "title": "Creativa",
+  "phone": { "value": "+54 2901 516646", "icon": "" },
+  "email": { "value": "belenpeluffolupiano@gmail.com", "icon": "" },
+  "address": { "value": "Kayén 249, 1er piso", "icon": "" },
+  "placeOfBirth": {
+    "value": "Ushuaia, Tierra del Fuego",
+    "label": "lugar de nacimiento"
+  },
+  "dateOfBirth": { "value": "17/08/1992", "label": "fecha de nacimiento" },
+  "dni": { "value": "36.734.473", "label": "DNI" },
+  "cuil": { "value": "27-36.734.473-9", "label": "CUIL" }
+}
