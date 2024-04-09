@@ -1,0 +1,10 @@
+.profilePic {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.rotation {
+    transform: rotate(-10deg);
+    text-align: center;
+}
