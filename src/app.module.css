@@ -2,6 +2,10 @@
     --dark-secondary: #280b0bff;
     --light-secondary: #f9f9f9ff;
     --brand-orange: #f2421bff;
+    --title-size: 4rem;
+    --subtitle-size: 2rem;
+    --regular-size: 1rem;
+    --small-size: 0.8rem;
 }
 
 body {
@@ -14,18 +18,29 @@ body {
     height: 200px;
 }
 
-.rotatedText, .cardName, .cardTitle {
+.rotatedText, .cardName, .cardTitle, .contactItemText {
     transform: rotate(-5deg);
-    /* text-align: center; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .cardName {
-    font-size: 4rem;
+    font-size: var(--title-size);
 }
 
 .cardTitle {
-    font-size: 2rem;
+    font-size: var(--subtitle-size);
     letter-spacing: 16px;
+    color: var(--brand-orange);
+}
+
+.contactItemText, .contactItemTextBold {
+    font-size: var(--regular-size);
+}
+
+.contactItemTextBold {
+    font-weight: bold;
+}
+
+.contactItemIcon {
     color: var(--brand-orange);
 }
