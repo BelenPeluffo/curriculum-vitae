@@ -1,46 +1,71 @@
 :root {
-    --dark-secondary: #280b0bff;
-    --light-secondary: #f9f9f9ff;
-    --brand-orange: #f2421bff;
-    --title-size: 4rem;
-    --subtitle-size: 2rem;
-    --regular-size: 1rem;
-    --small-size: 0.8rem;
+  --dark-secondary: #280b0bff;
+  --light-secondary: #f9f9f9ff;
+  --brand-orange: #f2421bff;
+  --title-size: 4rem;
+  --subtitle-size: 2rem;
+  --regular-size: 1rem;
+  --small-size: 0.8rem;
 }
 
 body {
-    background-color: var(--light-secondary);
+  background-color: var(--light-secondary);
 }
 
 .profilePic {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }
 
-.rotatedText, .cardName, .cardTitle, .contactItemText {
-    transform: rotate(-5deg);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.rotatedText,
+.cardName,
+.cardTitle,
+.contactItemText {
+  transform: rotate(-5deg);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .cardName {
-    font-size: var(--title-size);
+  font-size: var(--title-size);
 }
 
 .cardTitle {
-    font-size: var(--subtitle-size);
-    letter-spacing: 16px;
-    color: var(--brand-orange);
+  font-size: var(--subtitle-size);
+  letter-spacing: 16px;
+  color: var(--brand-orange);
 }
 
-.contactItemText, .contactItemTextBold {
-    font-size: var(--regular-size);
+.annotationTitle {
 }
 
-.contactItemTextBold {
-    font-weight: bold;
+.annotationSubtitle {
 }
 
-.contactItemIcon {
-    color: var(--brand-orange);
+.contactItemText,
+.contactItemTextBold,
+.annotationSubtitle {
+  font-size: var(--regular-size);
+}
+
+.contactItemTextBold,
+.annotationTitle {
+  font-weight: bold;
+}
+
+.contactItemIcon,
+.annotationTitle,
+.annotationSubtitle,
+ul {
+  color: var(--brand-orange);
+}
+
+ul {
+  margin-block-start: 0;
+  padding-left: 20px;
+  list-style-type: circle;
+}
+
+li {
+  color: black;
 }
