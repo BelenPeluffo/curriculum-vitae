@@ -1,10 +1,31 @@
+:root {
+    --dark-secondary: #280b0bff;
+    --light-secondary: #f9f9f9ff;
+    --brand-orange: #f2421bff;
+}
+
+body {
+    background-color: var(--light-secondary);
+}
+
 .profilePic {
     border-radius: 50%;
     width: 200px;
     height: 200px;
 }
 
-.rotation {
-    transform: rotate(-10deg);
-    text-align: center;
+.rotatedText, .cardName, .cardTitle {
+    transform: rotate(-5deg);
+    /* text-align: center; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cardName {
+    font-size: 4rem;
+}
+
+.cardTitle {
+    font-size: 2rem;
+    letter-spacing: 16px;
+    color: var(--brand-orange);
 }
