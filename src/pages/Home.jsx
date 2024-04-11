@@ -5,6 +5,7 @@ import MainDataContainer from "../components/MainDataContainer/MainDataContainer
 import ContactData from "./ContactData";
 import PersonalData from "./PersonalData";
 import BioContainer from "../components/BioContainer/BioContainer";
+import Lenguages from "./Languages";
 
 const mockAnnItems = ["ganas de agarrar la pala", "iteligencia infravalorada"];
 const mockMainItems = [
@@ -42,12 +43,14 @@ const mockPersonalInfo = [
 ];
 const mockBio = {
   title: "React frontend developer",
-  subtitle: "con interés por el diseño UI",
+  subtitle: "con interés por el diseño",
 };
+const mockLanguages = [
+  { language: "español", rating: 5 },
+  { language: "ingles", rating: 4 },
+];
 
 const Home = () => {
-  //   const { data } = useContext(AppContext);
-
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <ProfileCard
@@ -56,20 +59,19 @@ const Home = () => {
         photo={profilePic}
       />
       <BioContainer bio={mockBio} />
-      <ContactData items={mockContactInfo} />
-      <PersonalData items={mockPersonalInfo} />
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           gap: "16px",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           paddingLeft: "16px",
           paddingRight: "16px",
           marginTop: "32px",
           marginBottom: "32px",
         }}
       >
+        <PersonalData items={mockPersonalInfo} />
         <AnnotationContainer
           title={"Qué vamos a hacer?"}
           subtitle={"Ni idea"}
@@ -83,6 +85,8 @@ const Home = () => {
       </div>
       <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />
       <MainDataContainer sectionTitle={"Neil"} items={mockMainItems} />
+      <Lenguages items={mockLanguages} />
+      <ContactData items={mockContactInfo} />
     </div>
   );
 };
