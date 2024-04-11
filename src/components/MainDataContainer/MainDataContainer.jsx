@@ -6,7 +6,7 @@ const MainDataContainer = ({ sectionTitle, items }) => {
   console.log("diagonalLength?", lineLength);
   return (
     <div>
-      <div className={styles.sectionTitle}>{sectionTitle}</div>
+      <div className={styles.sectionTitle}>{sectionTitle.toUpperCase()}</div>
       {items ? (
         <div>
           <DiagonalLine x1={0} y1={0} diagonalDistance={lineLength} />

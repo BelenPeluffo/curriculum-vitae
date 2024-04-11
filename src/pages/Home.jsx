@@ -46,6 +46,7 @@ const Home = () => {
         items={mockAnnItems}
       />
       <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />
+      <MainDataContainer sectionTitle={"Neil"} items={mockMainItems} />
     </div>
   );
 };

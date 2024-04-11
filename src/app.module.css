@@ -14,7 +14,7 @@ body {
 
 ul {
   margin-block-start: 0;
-  padding-left: 20px;
+  padding-left: 32px;
   display: flex;
   flex-direction: column;
   justify-content:start;
@@ -78,7 +78,7 @@ ul {
   color: var(--light-secondary);
   background-color: var(--brand-orange);
   padding: 4px 8px;
-  border-radius: 20px;
+  border-radius: 15px;
   text-align: center;
   max-width: fit-content;
 }
