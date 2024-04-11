@@ -86,3 +86,14 @@ ul {
 .itemDescription {
   font-size: var(--small-size);
 }
+
+.bioText,
+.bioSubtitle {
+  font-size: var(--subtitle-size);
+  text-align: center;
+  color: var(--light-secondary);
+}
+
+.bioSubtitle {
+  font-size: var(--regular-size);
+}

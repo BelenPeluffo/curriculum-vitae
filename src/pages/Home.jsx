@@ -1,10 +1,10 @@
 import ProfileCard from "../components/ProfileCard/ProfileCard";
 import profilePic from "../assets/images/26170583_10213023271648707_1006969560875683411_o.jpg";
-import ContactItem from "../components/ContactItem/ContactItem";
 import AnnotationContainer from "../components/AnnotationContainer/AnnotationContainer";
 import MainDataContainer from "../components/MainDataContainer/MainDataContainer";
 import ContactData from "./ContactData";
 import PersonalData from "./PersonalData";
+import BioContainer from "../components/BioContainer/BioContainer";
 
 const mockAnnItems = ["ganas de agarrar la pala", "iteligencia infravalorada"];
 const mockMainItems = [
@@ -40,6 +40,10 @@ const mockPersonalInfo = [
   { label: "DNI", value: "36.734.473" },
   { label: "CUIL", value: "27-36.734.473-9" },
 ];
+const mockBio = {
+  title: "React frontend developer",
+  subtitle: "con interés por el diseño UI",
+};
 
 const Home = () => {
   //   const { data } = useContext(AppContext);
@@ -51,6 +55,7 @@ const Home = () => {
         title={"CREATIVA"}
         photo={profilePic}
       />
+      <BioContainer bio={mockBio} />
       <ContactData items={mockContactInfo} />
       <PersonalData items={mockPersonalInfo} />
       <div
