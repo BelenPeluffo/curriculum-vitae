@@ -57,7 +57,7 @@ const mockHobbies = [
 
 const Home = () => {
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={{ width: "100%", height: "100%" }} className="app-container">
       <ProfileCard
         name={"Belén Peluffo"}
         title={"CREATIVA"}
@@ -75,6 +75,7 @@ const Home = () => {
           marginTop: "32px",
           marginBottom: "32px",
         }}
+        className="annotations"
       >
         <PersonalData items={mockPersonalInfo} />
         <AnnotationContainer
@@ -89,7 +90,7 @@ const Home = () => {
         />
       </div>
       <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />
-      <MainDataContainer sectionTitle={"Neil"} items={mockMainItems} />
+      <MainDataContainer sectionTitle={"Neil"} items={mockMainItems} alignment="end" />
       <Languages items={mockLanguages} />
       <HobbiesWheel items={mockHobbies} />
       <ContactData items={mockContactInfo} />

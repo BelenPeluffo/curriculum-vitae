@@ -2,7 +2,7 @@ import styles from "../../app.module.css";
 
 const ProfileCard = ({ photo, name, title }) => {
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center" }} className="profile-card">
       <img
         src={photo}
         alt={`La cara de ${name}`}
