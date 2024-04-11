@@ -4,6 +4,7 @@ import ContactItem from "../components/ContactItem/ContactItem";
 import AnnotationContainer from "../components/AnnotationContainer/AnnotationContainer";
 import MainDataContainer from "../components/MainDataContainer/MainDataContainer";
 import ContactData from "./ContactData";
+import PersonalData from "./PersonalData";
 
 const mockAnnItems = ["ganas de agarrar la pala", "iteligencia infravalorada"];
 const mockMainItems = [
@@ -28,7 +29,17 @@ const mockMainItems = [
     description: "Universidad Nacional de Córdoba",
   },
 ];
-const mockContactInfo = [{data: "+54 2901 516646"}, {data: "Kayen 249, 1er piso"} , {data: "belenpeluffolupiano@gmail.com"}];
+const mockContactInfo = [
+  { data: "+54 2901 516646" },
+  { data: "Kayen 249, 1er piso" },
+  { data: "belenpeluffolupiano@gmail.com" },
+];
+const mockPersonalInfo = [
+  { label: "lugar de nacimiento", value: "Ushuaia, Tierra del Fuego" },
+  { label: "fecha de nacimiento", value: "17/08/1992" },
+  { label: "DNI", value: "36.734.473" },
+  { label: "CUIL", value: "27-36.734.473-9" },
+];
 
 const Home = () => {
   //   const { data } = useContext(AppContext);
@@ -41,7 +52,7 @@ const Home = () => {
         photo={profilePic}
       />
       <ContactData items={mockContactInfo} />
-      <ContactItem value="ítem cualquiera" label={"etiqueta"} />
+      <PersonalData items={mockPersonalInfo} />
       <AnnotationContainer
         title={"Qué vamos a hacer?"}
         subtitle={"Ni idea"}
