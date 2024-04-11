@@ -5,7 +5,7 @@ import MainDataContainer from "../components/MainDataContainer/MainDataContainer
 import ContactData from "./ContactData";
 import PersonalData from "./PersonalData";
 import BioContainer from "../components/BioContainer/BioContainer";
-import Lenguages from "./Languages";
+import Languages from "./Languages";
 
 const mockAnnItems = ["ganas de agarrar la pala", "iteligencia infravalorada"];
 const mockMainItems = [
@@ -85,7 +85,7 @@ const Home = () => {
       </div>
       <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />
       <MainDataContainer sectionTitle={"Neil"} items={mockMainItems} />
-      <Lenguages items={mockLanguages} />
+      <Languages items={mockLanguages} />
       <ContactData items={mockContactInfo} />
     </div>
   );

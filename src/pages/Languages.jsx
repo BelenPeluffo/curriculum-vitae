@@ -1,6 +1,6 @@
 import LanguageItem from "../components/LanguageItem/LanguageItem";
 
-const Lenguages = ({ items }) => {
+const Languages = ({ items }) => {
   return (
     <div>
       <div>Esta creativa maneja varios</div>
@@ -20,4 +20,4 @@ const Lenguages = ({ items }) => {
   );
 };
 
-export default Lenguages;
+export default Languages;
