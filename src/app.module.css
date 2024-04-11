@@ -4,6 +4,7 @@
   --brand-orange: #f2421bff;
   --title-size: 4rem;
   --subtitle-size: 2rem;
+  --big-size: 1.5rem;
   --regular-size: 1rem;
   --small-size: 0.8rem;
 }
@@ -36,7 +37,8 @@ ul {
 .cardTitle,
 .contactItemText,
 .sectionTitle,
-.itemContainer {
+.itemContainer,
+.languageTitle {
   transform: rotate(-5deg);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -96,4 +98,9 @@ ul {
 
 .bioSubtitle {
   font-size: var(--regular-size);
+}
+
+.languageTitle {
+  color: var(--brand-orange);
+  font-size: var(--subtitle-size);
 }
