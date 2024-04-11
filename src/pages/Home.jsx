@@ -53,11 +53,29 @@ const Home = () => {
       />
       <ContactData items={mockContactInfo} />
       <PersonalData items={mockPersonalInfo} />
-      <AnnotationContainer
-        title={"Qué vamos a hacer?"}
-        subtitle={"Ni idea"}
-        items={mockAnnItems}
-      />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "16px",
+          justifyContent: "space-between",
+          paddingLeft: "16px",
+          paddingRight: "16px",
+          marginTop: "32px",
+          marginBottom: "32px",
+        }}
+      >
+        <AnnotationContainer
+          title={"Qué vamos a hacer?"}
+          subtitle={"Ni idea"}
+          items={mockAnnItems}
+        />
+        <AnnotationContainer
+          title={"Qué vamos a hacer?"}
+          subtitle={"Ni idea"}
+          items={mockAnnItems}
+        />
+      </div>
       <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />
       <MainDataContainer sectionTitle={"Neil"} items={mockMainItems} />
     </div>
