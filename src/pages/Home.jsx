@@ -6,6 +6,7 @@ import ContactData from "./ContactData";
 import PersonalData from "./PersonalData";
 import BioContainer from "../components/BioContainer/BioContainer";
 import Languages from "./Languages";
+import HobbiesWheel from "../components/HobbiesWheel/HobbiesWheel";
 
 const mockAnnItems = ["ganas de agarrar la pala", "iteligencia infravalorada"];
 const mockMainItems = [
@@ -49,6 +50,10 @@ const mockLanguages = [
   { language: "español", rating: 5 },
   { language: "ingles", rating: 4 },
 ];
+const mockHobbies = [
+  { label: "Idiomas", value: 100 },
+  { label: "Cocinar", value: 100 },
+];
 
 const Home = () => {
   return (
@@ -86,6 +91,7 @@ const Home = () => {
       <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />
       <MainDataContainer sectionTitle={"Neil"} items={mockMainItems} />
       <Languages items={mockLanguages} />
+      <HobbiesWheel items={mockHobbies} />
       <ContactData items={mockContactInfo} />
     </div>
   );
