@@ -16,6 +16,16 @@ const mockMainItems = [
     title: "Arquitectura (1er Cuatrimestre)",
     description: "Universidad Nacional de Córdoba",
   },
+  {
+    date: "02/2012-07/2012",
+    title: "Arquitectura (1er Cuatrimestre)",
+    description: "Universidad Nacional de Córdoba",
+  },
+  {
+    date: "02/2012-07/2012",
+    title: "Arquitectura (1er Cuatrimestre)",
+    description: "Universidad Nacional de Córdoba",
+  },
 ];
 
 const Home = () => {
