@@ -8,7 +8,7 @@ const MainDataContainer = ({ sectionTitle, items }) => {
     <div>
       <div className={styles.sectionTitle}>{sectionTitle.toUpperCase()}</div>
       {items ? (
-        <div>
+        <div style={{ width: "60%" }}>
           <DiagonalLine x1={0} y1={0} diagonalDistance={lineLength} />
           <ul>
             {items

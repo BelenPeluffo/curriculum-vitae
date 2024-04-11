@@ -3,6 +3,7 @@ import profilePic from "../assets/images/26170583_10213023271648707_100696956087
 import ContactItem from "../components/ContactItem/ContactItem";
 import AnnotationContainer from "../components/AnnotationContainer/AnnotationContainer";
 import MainDataContainer from "../components/MainDataContainer/MainDataContainer";
+import ContactData from "./ContactData";
 
 const mockAnnItems = ["ganas de agarrar la pala", "iteligencia infravalorada"];
 const mockMainItems = [
@@ -27,6 +28,7 @@ const mockMainItems = [
     description: "Universidad Nacional de Córdoba",
   },
 ];
+const mockContactInfo = [{data: "+54 2901 516646"}, {data: "Kayen 249, 1er piso"} , {data: "belenpeluffolupiano@gmail.com"}];
 
 const Home = () => {
   //   const { data } = useContext(AppContext);
@@ -38,7 +40,7 @@ const Home = () => {
         title={"CREATIVA"}
         photo={profilePic}
       />
-      <ContactItem value="ítem cualquiera" />
+      <ContactData items={mockContactInfo} />
       <ContactItem value="ítem cualquiera" label={"etiqueta"} />
       <AnnotationContainer
         title={"Qué vamos a hacer?"}
