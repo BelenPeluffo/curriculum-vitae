@@ -8,7 +8,7 @@ import BioContainer from "../components/BioContainer/BioContainer";
 import Languages from "./Languages";
 import HobbiesWheel from "../components/HobbiesWheel/HobbiesWheel";
 
-const mockAnnItems = ["ganas de agarrar la pala", "iteligencia infravalorada"];
+const mockAnnItems = ["ganas de agarrar la pala", "inteligencia infravalorada"];
 const mockMainItems = [
   {
     date: "2004-2010",
@@ -89,8 +89,22 @@ const Home = () => {
           items={mockAnnItems}
         />
       </div>
-      <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />
-      <MainDataContainer sectionTitle={"Neil"} items={mockMainItems} alignment="end" />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "16px",
+          width: "100%",
+          justifyContent: "space-around",
+        }}
+      >
+        <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />
+        <MainDataContainer
+          sectionTitle={"Neil"}
+          items={mockMainItems}
+          alignment="end"
+        />
+      </div>
       <Languages items={mockLanguages} />
       <HobbiesWheel items={mockHobbies} />
       <ContactData items={mockContactInfo} />
