@@ -7,6 +7,8 @@ import PersonalData from "./PersonalData";
 import BioContainer from "../components/BioContainer/BioContainer";
 import Languages from "./Languages";
 import HobbiesWheel from "../components/HobbiesWheel/HobbiesWheel";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 const mockAnnItems = ["ganas de agarrar la pala", "inteligencia infravalorada"];
 const mockMainItems = [
@@ -32,9 +34,8 @@ const mockMainItems = [
   },
 ];
 const mockContactInfo = [
-  { data: "+54 2901 516646" },
-  { data: "Kayen 249, 1er piso" },
-  { data: "belenpeluffolupiano@gmail.com" },
+  { data: "+54 2901 516646", icon: <WhatsAppIcon /> },
+  { data: "belenpeluffolupiano@gmail.com", icon: <AlternateEmailIcon /> },
 ];
 const mockPersonalInfo = [
   { label: "lugar de nacimiento", value: "Ushuaia, Tierra del Fuego" },
