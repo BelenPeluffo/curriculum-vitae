@@ -7,9 +7,10 @@ const ContactItem = ({ icon, value, label }) => {
     <div
       style={{
         display: "flex",
-        alignItems: "center",
-        gap: "16px",
+        alignItems: label ? "start" : "center",
+        gap: label ? "0" : "16px",
         justifyContent: "center",
+        flexDirection: label ? "column" : "row"
       }}
       className={styles.contactItemText}
     >
@@ -17,7 +18,7 @@ const ContactItem = ({ icon, value, label }) => {
         <div className={styles.contactItemIcon}>{icon ? icon : "ícono"}</div>
       ) : null}
       {label ? (
-        <div className={styles.contactItemTextBold}>{label}:</div>
+        <div className={styles.contactItemTextBold}>{label}</div>
       ) : null}
       <div>{value}</div>
     </div>
