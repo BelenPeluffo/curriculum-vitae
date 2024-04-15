@@ -76,10 +76,10 @@ const Home = () => {
           flexDirection: "row",
           gap: "16px",
           justifyContent: "space-around",
+          alignItems: "center",
           paddingLeft: "16px",
           paddingRight: "16px",
-          marginTop: "32px",
-          marginBottom: "32px",
+          marginTop: "10%"
         }}
         className="annotations"
       >
@@ -102,6 +102,7 @@ const Home = () => {
           gap: "16px",
           width: "100%",
           justifyContent: "space-around",
+          marginTop: "10%"
         }}
       >
         <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />

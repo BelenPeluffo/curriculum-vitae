@@ -24,10 +24,10 @@ const HobbiesWheel = ({ items }) => {
         legend={{ hidden: true }}
         colors={["var(--brand-orange)"]}
       ></PieChart>
-      <img
+      {/* <img
         src={BrandLogo}
         style={{ position: "absolute", top: "252%", right: "46%" }}
-      />
+      /> */}
     </div>
   );
 };

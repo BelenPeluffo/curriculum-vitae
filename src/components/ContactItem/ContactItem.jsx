@@ -7,7 +7,7 @@ const ContactItem = ({ icon, value, label }) => {
         display: "flex",
         alignItems: "center",
         gap: "16px",
-        marginBottom: "8px",
+        // marginBottom: "8px",
       }}
       className={styles.contactItemText}
     >
