@@ -99,13 +99,26 @@ ul {
   font-size: var(--regular-size);
 }
 
-.languageTitle {
-  color: var(--brand-orange);
-  font-size: var(--subtitle-size);
-  padding-bottom: 16px;
+.languageTitle, .hobbieItem {
+  color: var(--brand-orange) !important;
+  font-size: var(--subtitle-size) !important;
+  padding-bottom: 16px !important;
 }
 
 .languageItem {
   color: var(--brand-orange);
   font-size: var(--big-size);
+}
+
+.hobbieItem:hover {
+  cursor: pointer;
+}
+
+.hobbieItem::after {
+  background-color: var(--brand-orange);
+  padding: 4px 2px;
+}
+
+.donutChart {
+  width: 100% !important;
 }

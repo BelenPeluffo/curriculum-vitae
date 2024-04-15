@@ -57,8 +57,8 @@ const mockLanguages = [
   { language: "inglés", rating: 4 },
 ];
 const mockHobbies = [
-  { label: "Idiomas", value: 100 },
-  { label: "Cocinar", value: 100 },
+  { label: "Idiomas", value: 100, description: "Me gustan los idiomas" },
+  { label: "Cocinar", value: 100, description: "Me encanta cocinar" },
 ];
 
 const Home = () => {

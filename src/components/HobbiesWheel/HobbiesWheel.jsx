@@ -1,8 +1,9 @@
 import { PieChart } from "@mui/x-charts/PieChart";
 import BrandLogo from "../../assets/images/logo.svg";
-import { useDrawingArea } from "@mui/x-charts";
+import { ResponsiveChartContainer, useDrawingArea } from "@mui/x-charts";
 import { useState } from "react";
 import { styled } from "@mui/material";
+import styles from "../../app.module.css";
 
 const StyledText = styled("text")(({ theme }) => ({
   fill: theme.palette.text.primary,
@@ -11,11 +12,16 @@ const StyledText = styled("text")(({ theme }) => ({
   fontSize: 20,
 }));
 
-const CenterItem = ({ children }) => {
+const CenterItem = ({ children, onClick }) => {
   const { width, left, height, top } = useDrawingArea();
   console.log("width?", width, "left?", left);
   return (
-    <StyledText x={left + width / 2} y={top + height / 2}>
+    <StyledText
+      x={left + width / 2}
+      y={top + height / 2}
+      className={styles.hobbieItem}
+      onClick={onClick}
+    >
       {children}
     </StyledText>
   );
@@ -32,28 +38,37 @@ const HobbiesWheel = ({ items }) => {
         width: "100%",
         alignItems: "center",
       }}
+      className="hobbies-wheel"
     >
       <PieChart
-        series={[
-          { paddingAngle: 5, innerRadius: 160, outerRadius: 200, data: items },
-        ]}
-        width={400}
-        // width="100%"
-        height={400}
-        legend={{ hidden: true }}
-        colors={["var(--brand-orange)"]}
-        onItemClick={(e, data) => setHobbie(items[data.dataIndex])}
+      // series={[
+      //   {
+      //     paddingAngle: 5,
+      //     innerRadius: 160,
+      //     outerRadius: 200,
+      //     data: items,
+      //   },
+      // ]}
+      // width={400}
+      // // width="100%"
+      // height={400}
+      // legend={{ hidden: true }}
+      // colors={["var(--brand-orange)"]}
+      // onItemClick={(e, data) => setHobbie(items[data.dataIndex])}
+      // className={styles.donutChart}
+      // sx={{
+      //   "& .MuiChartsSurface-root": {
+      //     translate: "transform(50%,50%)",
+      //   },
+      // }}
       >
-        <CenterItem>
-          {hobbie ? (
-            hobbie.label
-          ) : (
-            <img
-              src={BrandLogo}
-              // style={{ position: "absolute", top: "252%", right: "46%" }}
-            />
-          )}
+        <CenterItem onClick={() => console.log("Hallo")}>
+          {hobbie && hobbie.label}
         </CenterItem>
+        {/* <img
+          src={BrandLogo}
+          // style={{ position: "absolute", top: "252%", right: "46%" }}
+        /> */}
       </PieChart>
     </div>
   );
