@@ -37,7 +37,7 @@ const HobbiesWheel = ({ items }) => {
         width: "100%",
         alignItems: "center",
       }}
-      className="hobbies-wheel"
+      className={styles.hobbiesWheel}
     >
       <PieChart
         series={[
