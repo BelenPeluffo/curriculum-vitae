@@ -1,13 +1,15 @@
 import styles from "../../app.module.css";
 
 const ContactItem = ({ icon, value, label }) => {
+  console.log("label?", label);
+  console.log("icon?", icon);
   return (
     <div
       style={{
         display: "flex",
         alignItems: "center",
         gap: "16px",
-        // marginBottom: "8px",
+        justifyContent: "center",
       }}
       className={styles.contactItemText}
     >

@@ -1,6 +1,5 @@
 import { PieChart } from "@mui/x-charts/PieChart";
 import BrandLogo from "../../assets/images/logo.svg";
-import { useDrawingArea } from "@mui/x-charts";
 import { useState } from "react";
 import { styled } from "@mui/material";
 import styles from "../../app.module.css";
@@ -15,7 +14,6 @@ const StyledText = styled("text")(({ theme }) => ({
 const CenterItem = ({ children, onClick }) => {
   return (
     <StyledText
-      // x={left + width / 2}
       x={"50%"}
       y={"50%"}
       className={styles.hobbieItem}
@@ -49,7 +47,6 @@ const HobbiesWheel = ({ items }) => {
           },
         ]}
         width={400}
-        // width="100%"
         height={400}
         legend={{ hidden: true }}
         colors={["var(--brand-orange)"]}

@@ -38,11 +38,13 @@ ul {
 .cardTitle,
 .contactItemText,
 .sectionTitle,
-.itemContainer {
+.itemContainer,
+.contactTagLine {
   transform: rotate(-5deg);
 }
 
-.cardName {
+.cardName,
+.contactTagLine {
   font-size: var(--title-size);
 }
 
@@ -58,7 +60,6 @@ ul {
 .annotationSubtitle {
 }
 
-.contactItemText,
 .contactItemTextBold,
 .annotationSubtitle {
   font-size: var(--regular-size);
@@ -99,7 +100,8 @@ ul {
   font-size: var(--regular-size);
 }
 
-.languageTitle, .hobbieItem {
+.languageTitle,
+.hobbieItem {
   color: var(--brand-orange) !important;
   font-size: var(--subtitle-size) !important;
   padding-bottom: 16px !important;
@@ -124,5 +126,20 @@ ul {
 }
 
 .hobbiesWheel svg g g {
-  transform: translate(25%,25%) !important;
+  transform: translate(25%, 25%) !important;
+}
+
+.contactTagLine {
+  padding: 4% 0;
+  background-color: var(--brand-orange);
+  color: var(--light-secondary)
+}
+
+.contactItemText {
+  font-size: var(--big-size);
+}
+
+.contactItemIcon {
+  display: flex;
+  align-items: center;
 }
