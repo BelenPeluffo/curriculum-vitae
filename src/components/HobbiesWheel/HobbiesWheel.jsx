@@ -1,6 +1,6 @@
 import { PieChart } from "@mui/x-charts/PieChart";
 import BrandLogo from "../../assets/images/logo.svg";
-import { ResponsiveChartContainer, useDrawingArea } from "@mui/x-charts";
+import { useDrawingArea } from "@mui/x-charts";
 import { useState } from "react";
 import { styled } from "@mui/material";
 import styles from "../../app.module.css";
@@ -13,12 +13,11 @@ const StyledText = styled("text")(({ theme }) => ({
 }));
 
 const CenterItem = ({ children, onClick }) => {
-  const { width, left, height, top } = useDrawingArea();
-  console.log("width?", width, "left?", left);
   return (
     <StyledText
-      x={left + width / 2}
-      y={top + height / 2}
+      // x={left + width / 2}
+      x={"50%"}
+      y={"50%"}
       className={styles.hobbieItem}
       onClick={onClick}
     >
@@ -41,26 +40,26 @@ const HobbiesWheel = ({ items }) => {
       className="hobbies-wheel"
     >
       <PieChart
-      // series={[
-      //   {
-      //     paddingAngle: 5,
-      //     innerRadius: 160,
-      //     outerRadius: 200,
-      //     data: items,
-      //   },
-      // ]}
-      // width={400}
-      // // width="100%"
-      // height={400}
-      // legend={{ hidden: true }}
-      // colors={["var(--brand-orange)"]}
-      // onItemClick={(e, data) => setHobbie(items[data.dataIndex])}
-      // className={styles.donutChart}
-      // sx={{
-      //   "& .MuiChartsSurface-root": {
-      //     translate: "transform(50%,50%)",
-      //   },
-      // }}
+        series={[
+          {
+            paddingAngle: 5,
+            innerRadius: 160,
+            outerRadius: 200,
+            data: items,
+          },
+        ]}
+        width={400}
+        // width="100%"
+        height={400}
+        legend={{ hidden: true }}
+        colors={["var(--brand-orange)"]}
+        onItemClick={(e, data) => setHobbie(items[data.dataIndex])}
+        className={styles.donutChart}
+        sx={{
+          "& .MuiResponsiveChart-container svg > g > g": {
+            transform: "translate(50%,50%)",
+          },
+        }}
       >
         <CenterItem onClick={() => console.log("Hallo")}>
           {hobbie && hobbie.label}
