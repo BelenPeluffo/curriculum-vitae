@@ -10,6 +10,7 @@ const ContactData = ({ items }) => {
         alignItems: "center",
         justifyContent: 'space-around',
         marginTop: "10%",
+        padding: '10%'
       }}
     >
       <div
