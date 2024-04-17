@@ -12,6 +12,7 @@ const ContactData = ({ items }) => {
         marginTop: "10%",
         padding: "10%",
       }}
+      className={styles.rotatedText}
     >
       <div
         style={{

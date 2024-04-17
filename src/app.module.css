@@ -37,10 +37,8 @@ ul {
 .rotatedText,
 .cardName,
 .cardTitle,
-.contactItemText,
 .sectionTitle,
-.itemContainer,
-.contactTagLine {
+.itemContainer {
   transform: rotate(-5deg);
 }
 
@@ -156,7 +154,7 @@ ul {
   color: var(--light-secondary)
 }
 
-.contactItemText, .contactItemTextNotRotated {
+.contactItemText {
   font-size: var(--big-size);
 }
 

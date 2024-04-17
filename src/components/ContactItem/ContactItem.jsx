@@ -12,11 +12,7 @@ const ContactItem = ({ icon, value, label, type }) => {
         justifyContent: "center",
         flexDirection: type == "personal" ? "column" : "row",
       }}
-      className={
-        type == "personal"
-          ? styles.contactItemTextNotRotated
-          : styles.contactItemText
-      }
+      className={styles.contactItemText}
     >
       {!label ? (
         <div className={styles.contactItemIcon}>{icon ? icon : "ícono"}</div>
