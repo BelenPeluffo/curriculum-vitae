@@ -7,8 +7,8 @@ import PersonalData from "./PersonalData";
 import BioContainer from "../components/BioContainer/BioContainer";
 import Languages from "./Languages";
 import HobbiesWheel from "../components/HobbiesWheel/HobbiesWheel";
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 const mockAnnItems = ["ganas de agarrar la pala", "inteligencia infravalorada"];
 const mockMainItems = [
@@ -64,7 +64,10 @@ const mockHobbies = [
 
 const Home = () => {
   return (
-    <div style={{ width: "100%", height: "100%" }} className="app-container">
+    <div
+      style={{ width: "100%", height: "100%" }}
+      className="app-container"
+    >
       <ProfileCard
         name={"Belén Peluffo"}
         title={"CREATIVA"}
@@ -80,7 +83,7 @@ const Home = () => {
           alignItems: "center",
           paddingLeft: "16px",
           paddingRight: "16px",
-          marginTop: "10%"
+          marginTop: "10%",
         }}
         className="annotations"
       >
@@ -103,7 +106,7 @@ const Home = () => {
           gap: "16px",
           width: "100%",
           justifyContent: "space-around",
-          marginTop: "10%"
+          marginTop: "10%",
         }}
       >
         <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />
