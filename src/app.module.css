@@ -3,6 +3,7 @@
   --light-secondary: #f9f9f9ff;
   --brand-orange: #f2421bff;
   --title-size: 4rem;
+  --special-title-size: 3rem;
   --subtitle-size: 2rem;
   --big-size: 1.5rem;
   --regular-size: 1rem;
@@ -118,13 +119,18 @@ ul {
 .languageTitle,
 .hobbieItem {
   color: var(--brand-orange) !important;
-  font-size: var(--subtitle-size) !important;
+  font-size: var(--special-title-size) !important;
   padding-bottom: 16px !important;
+  font-weight: bold;
 }
 
 .languageItem {
-  color: var(--brand-orange);
+  /* color: var(--brand-orange); */
   font-size: var(--big-size);
+}
+
+.hobbieItem {
+  font-size: var(--subtitle-size) !important;
 }
 
 .hobbieItem:hover {
