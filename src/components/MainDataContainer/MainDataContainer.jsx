@@ -6,7 +6,11 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
   const lineLength = items.length * 65;
   const containerRef = useRef(null);
   const [leftDistance, setLeftDistance] = useState(null);
-  console.log("leftDistance?", leftDistance);
+  const [viewportSize, setViewportSize] = useState(null);
+
+  useEffect(() => {
+    resizingListener();
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -14,7 +18,22 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
       const rect = container.getBoundingClientRect();
       setLeftDistance(rect.left);
     }
-  }, []);
+  }, [viewportSize]);
+
+  const resizingListener = () => {
+    window.addEventListener("resize", () => {
+      setViewportSize({ height: window.innerHeight, width: window.innerWidth });
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        setViewportSize({
+          height: window.innerHeight,
+          width: window.innerWidth,
+        });
+      });
+    };
+  };
 
   return (
     <div
@@ -22,7 +41,6 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
       style={{
         display: "flex",
         flexDirection: "column",
-        // alignItems: alignment ? alignment : "start",
         alignItems: "start",
       }}
       ref={containerRef}
