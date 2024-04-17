@@ -1,5 +1,5 @@
 import ProfileCard from "../components/ProfileCard/ProfileCard";
-import profilePic from "../assets/images/26170583_10213023271648707_1006969560875683411_o.jpg";
+// import profilePic from "../assets/images/26170583_10213023271648707_1006969560875683411_o.jpg";
 import AnnotationContainer from "../components/AnnotationContainer/AnnotationContainer";
 import MainDataContainer from "../components/MainDataContainer/MainDataContainer";
 import ContactData from "./ContactData";
@@ -71,7 +71,7 @@ const Home = () => {
       <ProfileCard
         name={"Belén Peluffo"}
         title={"CREATIVA"}
-        photo={profilePic}
+        // photo={profilePic}
       />
       <BioContainer bio={mockBio} />
       <div

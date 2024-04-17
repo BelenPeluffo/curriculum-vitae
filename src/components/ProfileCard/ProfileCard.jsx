@@ -1,13 +1,19 @@
 import styles from "../../app.module.css";
 
-const ProfileCard = ({ photo, name, title }) => {
+const ProfileCard = ({ name, title }) => {
   return (
-    <div style={{ textAlign: "center", paddingTop: "5%" }} className="profile-card">
-      <img
-        src={photo}
-        alt={`La cara de ${name}`}
-        className={styles.profilePic}
-      />
+    <div
+      style={{
+        textAlign: "center",
+        paddingTop: "5%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+      className="profile-card"
+    >
+      <div className={styles.profilePic} />
       <div className={styles.cardName}>{name.toUpperCase()}</div>
       <div className={styles.cardTitle}>{title}</div>
     </div>

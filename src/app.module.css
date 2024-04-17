@@ -29,6 +29,26 @@ ul {
   border-radius: 50%;
   width: 200px;
   height: 200px;
+  animation: picRotation 5s infinite;
+  background-size: 200px;
+}
+
+@keyframes picRotation {
+  0% {
+    transform: rotatey(0);
+    background-image: url("../src/assets/images/26170583_10213023271648707_1006969560875683411_o.jpg");
+    background-blend-mode: normal;
+  }
+  25% {
+    transform: rotatey(180deg);
+    background-image: url("../src/assets/images/logo.svg");
+    background-blend-mode: normal;
+  }
+  100% {
+    transform: rotatey(360deg);
+    background-image: url("../src/assets/images/26170583_10213023271648707_1006969560875683411_o.jpg");
+    background-blend-mode: normal;
+  }
 }
 
 .itemContainer {
@@ -152,7 +172,7 @@ ul {
 .contactTagLine {
   padding: 4% 0;
   background-color: var(--brand-orange);
-  color: var(--light-secondary)
+  color: var(--light-secondary);
 }
 
 .contactItemText {
