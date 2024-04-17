@@ -149,7 +149,7 @@ ul {
   color: var(--light-secondary)
 }
 
-.contactItemText {
+.contactItemText, .contactItemTextNotRotated {
   font-size: var(--big-size);
 }
 
@@ -159,5 +159,5 @@ ul {
 }
 
 .contactItemTextBold {
-  
+  color: var(--brand-orange);
 }

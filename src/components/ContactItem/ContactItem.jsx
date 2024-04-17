@@ -7,18 +7,27 @@ const ContactItem = ({ icon, value, label, type }) => {
     <div
       style={{
         display: "flex",
-        alignItems: type == 'personal' ? "start" : "center",
-        gap: type == 'personal' ? "0" : "16px",
+        alignItems: type == "personal" ? "start" : "center",
+        gap: type == "personal" ? "0" : "16px",
         justifyContent: "center",
-        flexDirection: type == 'personal' ? "column" : "row"
+        flexDirection: type == "personal" ? "column" : "row",
       }}
-      className={type == 'personal' ? '' : styles.contactItemText}
+      className={
+        type == "personal"
+          ? styles.contactItemTextNotRotated
+          : styles.contactItemText
+      }
     >
       {!label ? (
         <div className={styles.contactItemIcon}>{icon ? icon : "ícono"}</div>
       ) : null}
       {label ? (
-        <div className={styles.contactItemTextBold}>{label}</div>
+        <div
+          className={styles.contactItemTextBold}
+          style={{ marginTop: "8px" }}
+        >
+          {label}
+        </div>
       ) : null}
       <div>{value}</div>
     </div>
@@ -29,7 +38,7 @@ ContactItem.propTypes = {
   icon: PropTypes.node,
   value: PropTypes.string,
   label: PropTypes.string,
-  type: PropTypes.oneOf(['contact','personal'])
+  type: PropTypes.oneOf(["contact", "personal"]),
 };
 
 export default ContactItem;
