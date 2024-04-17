@@ -54,6 +54,18 @@ ul {
   color: var(--brand-orange);
 }
 
+@keyframes sliding {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
 .annotationTitle {
 }
 
@@ -92,8 +104,10 @@ ul {
 .bioText,
 .bioSubtitle {
   font-size: var(--subtitle-size);
-  text-align: center;
+  /* text-align: center; */
   color: var(--light-secondary);
+  position: relative;
+  animation: sliding 30s infinite;
 }
 
 .bioSubtitle {

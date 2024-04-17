@@ -59,7 +59,7 @@ const HobbiesWheel = ({ items }) => {
         }}
       >
         <CenterItem onClick={() => console.log("Hallo")}>
-          {hobbie && hobbie.label}
+          {hobbie ? hobbie.label : "Hobbies"}
         </CenterItem>
         {/* <img
           src={BrandLogo}

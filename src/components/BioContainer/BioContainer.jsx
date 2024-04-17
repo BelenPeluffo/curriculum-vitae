@@ -6,15 +6,16 @@ const BioContainer = ({ bio }) => {
       style={{
         padding: "16px",
         backgroundColor: "var(--brand-orange)",
-        margin: "32px 64px",
+        margin: "32px 0",
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
+        width: "101%"
       }}
       className={styles.rotatedText}
     >
-      {Array(3).fill(
-        <div style={{ minWidth: "50%" }}>
+      {Array(4).fill(
+        <div style={{ minWidth: "40%" }}>
           <div className={styles.bioText}>{bio.title}</div>
           <div className={styles.bioSubtitle}>{bio.subtitle}</div>
         </div>
