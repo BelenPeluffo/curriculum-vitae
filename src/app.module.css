@@ -91,10 +91,11 @@ ul {
 .sectionTitle {
   color: var(--light-secondary);
   background-color: var(--brand-orange);
-  padding: 4px 8px;
-  border-radius: 15px;
+  padding: 4px 16px;
+  border-radius: 20px;
   text-align: center;
   max-width: fit-content;
+  font-size: var(--big-size);
 }
 
 .itemDescription {
