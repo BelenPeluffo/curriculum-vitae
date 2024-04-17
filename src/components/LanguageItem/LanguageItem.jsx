@@ -1,7 +1,10 @@
 import styles from "../../app.module.css";
+import OrangeCircle from "../../assets/images/circle1.svg";
 
 const LanguageItem = ({ language, rating }) => {
-  const ratingArray = Array(rating).fill("⭐️");
+  const ratingArray = Array(rating).fill(
+    <img src={OrangeCircle} width={16} style={{ paddingRight: 4 }} />
+  );
   const xPadding = 8;
   return (
     <div

@@ -2,7 +2,6 @@ import LanguageItem from "../components/LanguageItem/LanguageItem";
 import styles from "../app.module.css";
 
 const Languages = ({ items }) => {
-  // const margin = 
   return (
     <div
       className="language-container"
