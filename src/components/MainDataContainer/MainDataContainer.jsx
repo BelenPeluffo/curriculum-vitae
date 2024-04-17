@@ -3,9 +3,10 @@ import styles from "../../app.module.css";
 import DiagonalLine from "./DiagonalLine";
 
 const MainDataContainer = ({ sectionTitle, items, alignment }) => {
-  const lineLength = items.length * 65;
   const containerRef = useRef(null);
+  const lastItemRef = useRef(null);
   const [leftDistance, setLeftDistance] = useState(null);
+  const [lineLength, setLineLength] = useState(null);
   const [viewportSize, setViewportSize] = useState(null);
 
   useEffect(() => {
@@ -14,9 +15,14 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
 
   useEffect(() => {
     const container = containerRef.current;
+    const lastItem = lastItemRef.current;
     if (container) {
       const rect = container.getBoundingClientRect();
       setLeftDistance(rect.left);
+    }
+    if (lastItem) {
+      const rect = lastItem.getBoundingClientRect();
+      setLineLength(rect.top - 32);
     }
   }, [viewportSize]);
 
@@ -57,7 +63,11 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
           <ul>
             {items
               ? items.map((item, index) => (
-                  <li key={index} className={styles.itemContainer}>
+                  <li
+                    key={index}
+                    className={styles.itemContainer}
+                    ref={index === items.length - 1 ? lastItemRef : null}
+                  >
                     <div>{item.date}</div>
                     <div className={styles.contactItemTextBold}>
                       {item.title}
