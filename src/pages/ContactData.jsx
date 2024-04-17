@@ -8,9 +8,9 @@ const ContactData = ({ items }) => {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: 'space-around',
+        justifyContent: "space-around",
         marginTop: "10%",
-        padding: '10%'
+        padding: "10%",
       }}
     >
       <div
@@ -37,7 +37,12 @@ const ContactData = ({ items }) => {
       >
         {items
           ? items.map((item, index) => (
-              <ContactItem key={index} value={item.data} icon={item.icon} />
+              <ContactItem
+                key={index}
+                value={item.data}
+                icon={item.icon}
+                type="contact"
+              />
             ))
           : null}
       </div>

@@ -1,18 +1,18 @@
 import styles from "../../app.module.css";
+import PropTypes from "prop-types";
 
-const ContactItem = ({ icon, value, label }) => {
-  console.log("label?", label);
-  console.log("icon?", icon);
+const ContactItem = ({ icon, value, label, type }) => {
+  console.log("type?", type);
   return (
     <div
       style={{
         display: "flex",
-        alignItems: label ? "start" : "center",
-        gap: label ? "0" : "16px",
+        alignItems: type == 'personal' ? "start" : "center",
+        gap: type == 'personal' ? "0" : "16px",
         justifyContent: "center",
-        flexDirection: label ? "column" : "row"
+        flexDirection: type == 'personal' ? "column" : "row"
       }}
-      className={styles.contactItemText}
+      className={type == 'personal' ? '' : styles.contactItemText}
     >
       {!label ? (
         <div className={styles.contactItemIcon}>{icon ? icon : "ícono"}</div>
@@ -23,6 +23,13 @@ const ContactItem = ({ icon, value, label }) => {
       <div>{value}</div>
     </div>
   );
+};
+
+ContactItem.propTypes = {
+  icon: PropTypes.node,
+  value: PropTypes.string,
+  label: PropTypes.string,
+  type: PropTypes.oneOf(['contact','personal'])
 };
 
 export default ContactItem;
