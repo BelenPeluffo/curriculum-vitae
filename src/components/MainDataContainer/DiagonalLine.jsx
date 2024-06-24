@@ -7,15 +7,15 @@ const DiagonalLine = ({ x1, y1, length }) => {
   return (
     <motion.svg
       width={4}
-      height={length}
+      // height={length}
       style={{
         position: "absolute",
         paddingLeft: 16,
         zIndex: 0,
       }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0, height: 0 }}
+      whileInView={{ opacity: 1, height: length }}
+      transition={{ duration: 0.25 }}
     >
       <line y1={y1} y2={length} stroke="var(--brand-orange)" strokeWidth={4} />
     </motion.svg>

@@ -73,11 +73,11 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
                     className={styles.itemContainer}
                     initial={{
                       opacity: 0,
-                      y: alignment === "end" ? 100 : -100,
+                      y: 0,
                     }}
                     whileInView={{
                       opacity: 1,
-                      y: 0,
+                      y: 16,
                       transition: { duration: 0.5 * (index > 0 ? index : 0.5) },
                     }}
                     viewport={{ once: false }}
