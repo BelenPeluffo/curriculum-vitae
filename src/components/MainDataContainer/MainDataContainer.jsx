@@ -68,9 +68,19 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
           <ul>
             {items
               ? items.map((item, index) => (
-                  <li
+                  <motion.li
                     key={index}
                     className={styles.itemContainer}
+                    initial={{
+                      opacity: 0,
+                      y: alignment === "end" ? 100 : -100,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.5 * (index > 0 ? index : 0.5) },
+                    }}
+                    viewport={{ once: false }}
                     ref={index === items.length - 1 ? lastItemRef : null}
                   >
                     <div>{item.date}</div>
@@ -80,7 +90,7 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
                     <div className={styles.itemDescription}>
                       {item.description}
                     </div>
-                  </li>
+                  </motion.li>
                 ))
               : null}
           </ul>

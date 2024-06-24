@@ -11,6 +11,7 @@ const DiagonalLine = ({ x1, y1, length }) => {
       style={{
         position: "absolute",
         paddingLeft: 16,
+        zIndex: 0,
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
