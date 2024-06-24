@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 import styles from "../../app.module.css";
 import DiagonalLine from "./DiagonalLine";
 
@@ -24,7 +26,7 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
       const rect = lastItem.getBoundingClientRect();
       setLineLength(rect.top - 32);
     }
-  }, [viewportSize]);
+  }, [window.innerHeight, window.innerWidth, viewportSize]);
 
   const resizingListener = () => {
     window.addEventListener("resize", () => {
@@ -42,13 +44,16 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
   };
 
   return (
-    <div
+    <motion.div
       className="data-container"
       style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "start",
       }}
+      initial={{ opacity: 0, x: alignment === "end" ? 100 : -100 }}
+      whileInView={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
+      viewport={{ once: false }}
       ref={containerRef}
     >
       <div className={styles.sectionTitle}>{sectionTitle.toUpperCase()}</div>
@@ -81,8 +86,14 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
           </ul>
         </div>
       ) : null}
-    </div>
+    </motion.div>
   );
+};
+
+MainDataContainer.propTypes = {
+  sectionTitle: PropTypes.string,
+  items: PropTypes.array,
+  alignment: PropTypes.string,
 };
 
 export default MainDataContainer;
