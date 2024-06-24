@@ -1,4 +1,5 @@
 import styles from "../../app.module.css";
+import PropTypes from "prop-types";
 
 const LanguageItem = ({ language, rating }) => {
   const xPadding = 8;
@@ -21,6 +22,11 @@ const LanguageItem = ({ language, rating }) => {
       <div className={styles.languageItem}>{language}</div>
     </div>
   );
+};
+
+LanguageItem.propTypes = {
+  language: PropTypes.string.isRequired,
+  rating: PropTypes.string.isRequired,
 };
 
 export default LanguageItem;

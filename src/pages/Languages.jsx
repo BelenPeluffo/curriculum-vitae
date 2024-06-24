@@ -1,5 +1,6 @@
 import LanguageItem from "../components/LanguageItem/LanguageItem";
 import styles from "../app.module.css";
+import PropTypes from "prop-types";
 
 const Languages = ({ items }) => {
   return (
@@ -40,6 +41,10 @@ const Languages = ({ items }) => {
       </div>
     </div>
   );
+};
+
+Languages.propTypes = {
+  items: PropTypes.array,
 };
 
 export default Languages;
