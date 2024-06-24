@@ -48,14 +48,14 @@ const mockBio = {
   subtitle: "con interés por el diseño",
 };
 const mockLanguages = [
-  { language: "español", rating: 5 },
-  { language: "inglés", rating: 4 },
-  { language: "español", rating: 5 },
-  { language: "inglés", rating: 4 },
-  { language: "español", rating: 5 },
-  { language: "inglés", rating: 4 },
-  { language: "español", rating: 5 },
-  { language: "inglés", rating: 4 },
+  { language: "español", rating: 'c2' },
+  { language: "inglés", rating: 'c1' },
+  { language: "español", rating: 'c2' },
+  { language: "inglés", rating: 'c1' },
+  { language: "español", rating: 'c2' },
+  { language: "inglés", rating: 'c1' },
+  { language: "español", rating: 'c2' },
+  { language: "inglés", rating: 'c1' },
 ];
 const mockHobbies = [
   { label: "Idiomas", value: 100, description: "Me gustan los idiomas" },
