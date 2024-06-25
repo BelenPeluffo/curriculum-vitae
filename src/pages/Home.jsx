@@ -2,13 +2,13 @@
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import {
-  AnnotationContainer,
-  BioContainer,
-  HobbiesWheel,
-  MainDataContainer,
   ProfileCard,
-} from "../components";
-import { PersonalData, ContactData, Languages } from "./index";
+  HobbiesWheel,
+  BioContainer,
+  AnnotationContainer,
+  MainDataContainer,
+} from "@components";
+import { PersonalData, Languages, ContactData } from "@pages";
 
 const mockAnnItems = ["ganas de agarrar la pala", "inteligencia infravalorada"];
 const mockMainItems = [
