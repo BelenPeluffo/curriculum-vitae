@@ -1,6 +1,6 @@
-import LanguageItem from "../components/LanguageItem/LanguageItem";
 import styles from "../app.module.css";
 import PropTypes from "prop-types";
+import { LanguageItem } from "../components";
 
 const Languages = ({ items }) => {
   return (

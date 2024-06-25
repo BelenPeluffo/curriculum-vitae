@@ -1,14 +1,10 @@
-import ProfileCard from "../components/ProfileCard/ProfileCard";
 // import profilePic from "../assets/images/26170583_10213023271648707_1006969560875683411_o.jpg";
-import AnnotationContainer from "../components/AnnotationContainer/AnnotationContainer";
-import MainDataContainer from "../components/MainDataContainer/MainDataContainer";
 import ContactData from "./ContactData";
 import PersonalData from "./PersonalData";
-import BioContainer from "../components/BioContainer/BioContainer";
 import Languages from "./Languages";
-import HobbiesWheel from "../components/HobbiesWheel/HobbiesWheel";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import { AnnotationContainer, BioContainer, HobbiesWheel, MainDataContainer, ProfileCard } from "../components";
 
 const mockAnnItems = ["ganas de agarrar la pala", "inteligencia infravalorada"];
 const mockMainItems = [

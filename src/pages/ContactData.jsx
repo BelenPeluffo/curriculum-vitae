@@ -1,5 +1,5 @@
-import ContactItem from "../components/ContactItem/ContactItem";
 import styles from "../app.module.css";
+import { ContactItem } from "../components";
 
 const ContactData = ({ items }) => {
   return (
