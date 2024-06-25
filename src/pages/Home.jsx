@@ -1,10 +1,14 @@
 // import profilePic from "../assets/images/26170583_10213023271648707_1006969560875683411_o.jpg";
-import ContactData from "./ContactData";
-import PersonalData from "./PersonalData";
-import Languages from "./Languages";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
-import { AnnotationContainer, BioContainer, HobbiesWheel, MainDataContainer, ProfileCard } from "../components";
+import {
+  AnnotationContainer,
+  BioContainer,
+  HobbiesWheel,
+  MainDataContainer,
+  ProfileCard,
+} from "../components";
+import { PersonalData, ContactData, Languages } from "./index";
 
 const mockAnnItems = ["ganas de agarrar la pala", "inteligencia infravalorada"];
 const mockMainItems = [
@@ -44,14 +48,14 @@ const mockBio = {
   subtitle: "con interés por el diseño",
 };
 const mockLanguages = [
-  { language: "español", rating: 'c2' },
-  { language: "inglés", rating: 'c1' },
-  { language: "español", rating: 'c2' },
-  { language: "inglés", rating: 'c1' },
-  { language: "español", rating: 'c2' },
-  { language: "inglés", rating: 'c1' },
-  { language: "español", rating: 'c2' },
-  { language: "inglés", rating: 'c1' },
+  { language: "español", rating: "c2" },
+  { language: "inglés", rating: "c1" },
+  { language: "español", rating: "c2" },
+  { language: "inglés", rating: "c1" },
+  { language: "español", rating: "c2" },
+  { language: "inglés", rating: "c1" },
+  { language: "español", rating: "c2" },
+  { language: "inglés", rating: "c1" },
 ];
 const mockHobbies = [
   { label: "Idiomas", value: 100, description: "Me gustan los idiomas" },
@@ -60,10 +64,7 @@ const mockHobbies = [
 
 const Home = () => {
   return (
-    <div
-      style={{ width: "100%", height: "100%" }}
-      className="app-container"
-    >
+    <div style={{ width: "100%", height: "100%" }} className="app-container">
       <ProfileCard
         name={"Belén Peluffo"}
         title={"CREATIVA"}
