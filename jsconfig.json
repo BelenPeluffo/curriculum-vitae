@@ -5,6 +5,8 @@
       "@pages/*": ["./src/pages/*"],
       "@context/*": ["./src/context/*"],
       "@services/*": ["./src/services/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@database/*": ["./src/database/*"],
     }
   }
 }
