@@ -1,7 +1,7 @@
 import { PieChart } from "@mui/x-charts/PieChart";
 // import BrandLogo from "../../assets/images/logo.svg";
 import { useState } from "react";
-import { styled, Typography } from "@mui/material";
+import { styled } from "@mui/material";
 import styles from "../../app.module.css";
 
 const StyledText = styled("text")(({ theme }) => ({
@@ -22,7 +22,7 @@ const CenterItem = ({ children, onClick, subtitle }) => {
       >
         {children}
       </StyledText>
-      <StyledText fontSize={8} x={"50%"} y={"50%"} width={"50%"}>
+      <StyledText className={styles.hobbieSubtitle} x={"50%"} y={"60%"}>
         {subtitle}
       </StyledText>
     </>
@@ -66,7 +66,9 @@ const HobbiesWheel = ({ items }) => {
         <CenterItem
           onClick={() => console.log("Hallo")}
           subtitle={
-            !hobbie ? "Presioná sobre alguna de las porciones para verla" : null
+            !hobbie
+              ? "Presioná sobre alguna de las porciones para descubrirlos"
+              : null
           }
         >
           {hobbie ? hobbie.label : "Hobbies"}

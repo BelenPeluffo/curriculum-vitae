@@ -162,6 +162,11 @@ ul {
   padding: 4px 2px;
 }
 
+.hobbieSubtitle {
+  font-size: var(--regular-size) !important;
+  width: 1%;
+}
+
 .donutChart {
   width: 100% !important;
 }
