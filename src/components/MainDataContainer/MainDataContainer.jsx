@@ -1,47 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import styles from "../../app.module.css";
-import DiagonalLine from "./DiagonalLine";
+import { DiagonalLine } from ".";
 
 const MainDataContainer = ({ sectionTitle, items, alignment }) => {
   const containerRef = useRef(null);
   const lastItemRef = useRef(null);
-  const [leftDistance, setLeftDistance] = useState(null);
-  const [lineLength, setLineLength] = useState(null);
-  const [viewportSize, setViewportSize] = useState(null);
-
-  useEffect(() => {
-    resizingListener();
-  }, []);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    const lastItem = lastItemRef.current;
-    if (container) {
-      const rect = container.getBoundingClientRect();
-      setLeftDistance(rect.left);
-    }
-    if (lastItem) {
-      const rect = lastItem.getBoundingClientRect();
-      setLineLength(rect.top - 32);
-    }
-  }, [window.innerHeight, window.innerWidth, viewportSize]);
-
-  const resizingListener = () => {
-    window.addEventListener("resize", () => {
-      setViewportSize({ height: window.innerHeight, width: window.innerWidth });
-    });
-
-    return () => {
-      window.removeEventListener("resize", () => {
-        setViewportSize({
-          height: window.innerHeight,
-          width: window.innerWidth,
-        });
-      });
-    };
-  };
 
   return (
     <motion.div
@@ -59,12 +24,7 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
       <div className={styles.sectionTitle}>{sectionTitle.toUpperCase()}</div>
       {items ? (
         <div>
-          <DiagonalLine
-            x1={leftDistance}
-            y1={0}
-            length={lineLength}
-            alignment={alignment}
-          />
+          <DiagonalLine containerRef={containerRef} lastItemRef={lastItemRef} />
           <ul>
             {items
               ? items.map((item, index) => (
