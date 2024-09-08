@@ -1,10 +1,14 @@
 import styles from "../app.module.css";
 import PropTypes from "prop-types";
 import { LanguageItem } from "../components";
+import { motion } from "framer-motion";
 
 const Languages = ({ items }) => {
   return (
-    <div
+    <motion.div
+      initial={{ height: 0 }}
+      animate={{ height: "auto" }}
+      transition={{ duration: 0.5 }}
       className="language-container"
       style={{
         display: "flex",
@@ -16,7 +20,7 @@ const Languages = ({ items }) => {
         padding: 16,
       }}
     >
-      <div style={{ fontSize: "var(--small-size)", marginBottom: 0 }}>
+      <div style={{ fontSize: "var(--small-size)", marginBottom: "-0.5rem" }}>
         Esta creativa maneja varios
       </div>
       <div className={styles.languageTitle}>[i.djo.mas]</div>
@@ -39,7 +43,7 @@ const Languages = ({ items }) => {
             ))
           : null}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

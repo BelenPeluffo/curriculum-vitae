@@ -6,7 +6,7 @@ const BioContainer = ({ bio }) => {
       style={{
         padding: "16px",
         backgroundColor: "var(--brand-orange)",
-        margin: "32px 0",
+        margin: "32px 0 32px -32px",
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
