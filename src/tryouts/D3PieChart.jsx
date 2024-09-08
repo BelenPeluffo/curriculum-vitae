@@ -61,6 +61,22 @@ const RechartsPieChart = ({ items }) => {
                 </g>
               );
             }}
+            label={({ cx, cy, midAngle, innerRadius, outerRadius, name }) => {
+              const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+              const x = cx + radius * Math.cos(-midAngle * (Math.PI / 180));
+              const y = cy + radius * Math.sin(-midAngle * (Math.PI / 180));
+              return (
+                <text
+                  x={x > cx ? x + 50 : x - 50}
+                  y={y > cy ? y + 10 : y - 10}
+                  fill="var(--brand-orange)"
+                  textAnchor={x > cx ? "start" : "end"}
+                  dominantBaseline="central"
+                >
+                  {name}
+                </text>
+              );
+            }}
           />
         </PieChart>
 
@@ -69,7 +85,7 @@ const RechartsPieChart = ({ items }) => {
             position: "absolute",
             bottom: "50%",
             left: "50%",
-            transform: "translate(-55%, 50%)",
+            transform: "translate(-50%, 50%)",
             zIndex: 1000,
             display: "flex",
             flexDirection: "column",
@@ -95,6 +111,7 @@ const RechartsPieChart = ({ items }) => {
                 sx: {
                   backgroundColor: "var(--dark-gray)",
                   color: "var(--gray)",
+                  textAlign: "center",
                 },
               },
             }}
