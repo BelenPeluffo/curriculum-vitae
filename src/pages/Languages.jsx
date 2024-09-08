@@ -7,8 +7,11 @@ const Languages = ({ items }) => {
   return (
     <motion.div
       initial={{ height: 0 }}
-      animate={{ height: "auto" }}
-      transition={{ duration: 0.5 }}
+      whileInView={{
+        height: "100%",
+        transition: { duration: 0.5 },
+        // rotate: "-5deg",
+      }}
       className="language-container"
       style={{
         display: "flex",
