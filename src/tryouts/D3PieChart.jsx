@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Pie, PieChart, ResponsiveContainer } from "recharts";
 import InfoIcon from "@mui/icons-material/Info";
-import { IconButton, Typography } from "@mui/material";
+import { IconButton, Tooltip, Typography } from "@mui/material";
 
 const data02 = [
   { name: "A1", value: 100 },
@@ -19,6 +19,7 @@ const data02 = [
 
 const RechartsPieChart = () => {
   const [activeSlice, setActiveSlice] = useState(-1);
+  const [isTooltipOpen, setTooltipOpen] = useState(false);
 
   return (
     <>
@@ -66,9 +67,11 @@ const RechartsPieChart = () => {
             }}
           >
             <Typography variant="h5">Hobbies</Typography>
-            <IconButton>
-              <InfoIcon />
-            </IconButton>
+            <Tooltip title="Hobbies" placement="bottom" open={isTooltipOpen}>
+              <IconButton onClick={() => setTooltipOpen(!isTooltipOpen)}>
+                <InfoIcon />
+              </IconButton>
+            </Tooltip>
           </div>
         ) : null}
       </ResponsiveContainer>
