@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Pie, PieChart, ResponsiveContainer } from "recharts";
+import { Pie, PieChart, ResponsiveContainer, Sector } from "recharts";
 import InfoIcon from "@mui/icons-material/Info";
 import { IconButton, Tooltip, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 
-const RechartsPieChart = ({items}) => {
+const RechartsPieChart = ({ items }) => {
   const [activeSlice, setActiveSlice] = useState(-1);
   const [isTooltipOpen, setTooltipOpen] = useState(false);
 
@@ -23,15 +23,41 @@ const RechartsPieChart = ({items}) => {
             cx="50%"
             cy="50%"
             innerRadius={170}
-            outerRadius={200}
+            outerRadius={190}
             fill="var(--brand-orange)"
             activeIndex={activeSlice}
             onClick={(_, index) => setActiveSlice(index)}
             activeShape={(props) => {
-              const { payload } = props;
+              const {
+                fill,
+                cx,
+                cy,
+                innerRadius,
+                outerRadius,
+                startAngle,
+                endAngle,
+              } = props;
               return (
                 <g>
                   {/* Add styling to slice */}
+                  <Sector
+                    cx={cx}
+                    cy={cy}
+                    innerRadius={innerRadius}
+                    outerRadius={outerRadius}
+                    startAngle={startAngle}
+                    endAngle={endAngle}
+                    fill={fill}
+                  />
+                  <Sector
+                    cx={cx}
+                    cy={cy}
+                    startAngle={startAngle}
+                    endAngle={endAngle}
+                    innerRadius={outerRadius + 6}
+                    outerRadius={outerRadius + 10}
+                    fill={fill}
+                  />
                 </g>
               );
             }}
@@ -59,14 +85,17 @@ const RechartsPieChart = ({items}) => {
               <Typography>
                 {activeSlice !== -1
                   ? items[activeSlice].description
-                  : "Hobbies"}
+                  : "Clickeá y conocé mis pasiones"}
               </Typography>
             }
             placement="bottom"
             open={isTooltipOpen}
             slotProps={{
               tooltip: {
-                sx: { backgroundColor: "rgba(0, 0, 0, 0.1)", color: "gray" },
+                sx: {
+                  backgroundColor: "var(--dark-gray)",
+                  color: "var(--gray)",
+                },
               },
             }}
           >

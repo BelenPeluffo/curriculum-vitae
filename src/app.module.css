@@ -2,6 +2,8 @@
   --dark-secondary: #280b0bff;
   --light-secondary: #f9f9f9ff;
   --brand-orange: #f2421bff;
+  --dark-gray: rgba(0, 0, 0, 0.1);
+  --gray: rgba(0, 0, 0, 0.4);
   --title-size: 4rem;
   --special-title-size: 3rem;
   --subtitle-size: 2rem;
