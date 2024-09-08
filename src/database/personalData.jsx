@@ -49,6 +49,6 @@ export const mockLanguages = [
   { language: "inglés", rating: "c1" },
 ];
 export const mockHobbies = [
-  { label: "Idiomas", value: 100, description: "Me gustan los idiomas" },
-  { label: "Cocinar", value: 100, description: "Me encanta cocinar" },
+  { name: "Idiomas", value: 100, description: "Me gustan los idiomas" },
+  { name: "Cocinar", value: 100, description: "Me encanta cocinar" },
 ];

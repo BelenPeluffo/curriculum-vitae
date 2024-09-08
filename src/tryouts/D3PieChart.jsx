@@ -1,23 +1,10 @@
 import { useState } from "react";
 import { Pie, PieChart, ResponsiveContainer } from "recharts";
 import InfoIcon from "@mui/icons-material/Info";
-import { IconButton, styled, Tooltip, Typography } from "@mui/material";
+import { IconButton, Tooltip, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
-const data02 = [
-  { name: "A1", value: 100, description: "description" },
-  { name: "A2", value: 100, description: "description" },
-  { name: "B1", value: 100, description: "description" },
-  { name: "B2", value: 100, description: "description" },
-  { name: "B3", value: 100, description: "description" },
-  { name: "B4", value: 100, description: "description" },
-  { name: "B5", value: 100, description: "description" },
-  { name: "C1", value: 100, description: "description" },
-  { name: "C2", value: 100, description: "description" },
-  { name: "D1", value: 100, description: "description" },
-  { name: "D2", value: 100, description: "description" },
-];
-
-const RechartsPieChart = () => {
+const RechartsPieChart = ({items}) => {
   const [activeSlice, setActiveSlice] = useState(-1);
   const [isTooltipOpen, setTooltipOpen] = useState(false);
 
@@ -30,7 +17,7 @@ const RechartsPieChart = () => {
       >
         <PieChart width="100%" height="100%">
           <Pie
-            data={data02}
+            data={items}
             dataKey="value"
             paddingAngle={2}
             cx="50%"
@@ -65,13 +52,13 @@ const RechartsPieChart = () => {
           }}
         >
           <Typography variant="h5">
-            {activeSlice !== -1 ? data02[activeSlice].name : "Hobbies"}
+            {activeSlice !== -1 ? items[activeSlice].name : "Hobbies"}
           </Typography>
           <Tooltip
             title={
               <Typography>
                 {activeSlice !== -1
-                  ? data02[activeSlice].description
+                  ? items[activeSlice].description
                   : "Hobbies"}
               </Typography>
             }
@@ -94,3 +81,7 @@ const RechartsPieChart = () => {
 };
 
 export default RechartsPieChart;
+
+RechartsPieChart.propTypes = {
+  items: PropTypes.array,
+};

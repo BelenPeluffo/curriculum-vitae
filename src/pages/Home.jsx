@@ -9,6 +9,7 @@ import {
   mockAnnItems,
   mockBio,
   mockContactInfo,
+  mockHobbies,
   mockLanguages,
   mockMainItems,
   mockPersonalInfo,
@@ -69,7 +70,7 @@ const Home = () => {
       </div>
       <Languages items={mockLanguages} />
       {/* <HobbiesWheel items={mockHobbies} /> */}
-      <RechartsPieChart />
+      <RechartsPieChart items={mockHobbies} />
       <ContactData items={mockContactInfo} />
     </div>
   );
