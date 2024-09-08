@@ -6,13 +6,15 @@ import {
   MainDataContainer,
 } from "@components";
 import {
-  mockAnnItems,
+  offerItems,
   mockBio,
   mockContactInfo,
   mockHobbies,
   mockLanguages,
-  mockMainItems,
+  academicItems,
   mockPersonalInfo,
+  searchIntems,
+  workItems,
 } from "@database/personalData";
 import { PersonalData, Languages, ContactData } from "@pages";
 import RechartsPieChart from "../tryouts/D3PieChart";
@@ -41,14 +43,14 @@ const Home = () => {
       >
         <PersonalData items={mockPersonalInfo} />
         <AnnotationContainer
-          title={"Qué vamos a hacer?"}
-          subtitle={"Ni idea"}
-          items={mockAnnItems}
+          title={"Perfil laboral"}
+          subtitle={"¿Qué ofrezco?"}
+          items={offerItems}
         />
         <AnnotationContainer
-          title={"Qué vamos a hacer?"}
-          subtitle={"Ni idea"}
-          items={mockAnnItems}
+          title={"Horizonte laboral"}
+          subtitle={"¿Qué busco?"}
+          items={searchIntems}
         />
       </div>
       <div
@@ -61,10 +63,10 @@ const Home = () => {
           marginTop: "10%",
         }}
       >
-        <MainDataContainer sectionTitle={"Educación"} items={mockMainItems} />
+        <MainDataContainer sectionTitle={"Trayecto educativo"} items={academicItems} />
         <MainDataContainer
-          sectionTitle={"Neil"}
-          items={mockMainItems}
+          sectionTitle={"Experiencia laboral"}
+          items={workItems}
           alignment="end"
         />
       </div>

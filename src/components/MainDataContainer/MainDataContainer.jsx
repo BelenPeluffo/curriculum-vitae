@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import styles from "../../app.module.css";
-import { DiagonalLine } from ".";
 
 const MainDataContainer = ({ sectionTitle, items, alignment }) => {
   const containerRef = useRef(null);
@@ -24,7 +23,7 @@ const MainDataContainer = ({ sectionTitle, items, alignment }) => {
       <div className={styles.sectionTitle}>{sectionTitle.toUpperCase()}</div>
       {items ? (
         <div>
-          <DiagonalLine containerRef={containerRef} lastItemRef={lastItemRef} />
+          {/* <DiagonalLine containerRef={containerRef} lastItemRef={lastItemRef} /> */}
           <ul>
             {items
               ? items.map((item, index) => (
