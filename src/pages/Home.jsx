@@ -1,13 +1,20 @@
 // import profilePic from "../assets/images/26170583_10213023271648707_1006969560875683411_o.jpg";
 import {
   ProfileCard,
-  HobbiesWheel,
   BioContainer,
   AnnotationContainer,
   MainDataContainer,
 } from "@components";
-import { mockAnnItems, mockBio, mockContactInfo, mockHobbies, mockLanguages, mockMainItems, mockPersonalInfo } from "@database/personalData";
+import {
+  mockAnnItems,
+  mockBio,
+  mockContactInfo,
+  mockLanguages,
+  mockMainItems,
+  mockPersonalInfo,
+} from "@database/personalData";
 import { PersonalData, Languages, ContactData } from "@pages";
+import RechartsPieChart from "../tryouts/D3PieChart";
 
 const Home = () => {
   return (
@@ -61,7 +68,8 @@ const Home = () => {
         />
       </div>
       <Languages items={mockLanguages} />
-      <HobbiesWheel items={mockHobbies} />
+      {/* <HobbiesWheel items={mockHobbies} /> */}
+      <RechartsPieChart />
       <ContactData items={mockContactInfo} />
     </div>
   );
