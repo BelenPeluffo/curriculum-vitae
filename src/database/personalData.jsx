@@ -60,8 +60,8 @@ export const workItems = [
   },
 ];
 export const mockContactInfo = [
-  { data: "+54 2901 516646", icon: <WhatsAppIcon /> },
-  { data: "belenpeluffolupiano@gmail.com", icon: <AlternateEmailIcon /> },
+  { data: "+54 2901 516646", icon: <WhatsAppIcon /> , contactType: 'whatsapp'},
+  { data: "belenpeluffolupiano@gmail.com", icon: <AlternateEmailIcon /> , contactType: 'email'},
 ];
 export const mockPersonalInfo = [
   { label: "lugar de nacimiento", value: "Ushuaia, Tierra del Fuego" },

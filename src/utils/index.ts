@@ -1,0 +1,1 @@
+export { getClickHandler } from './contactDataMethods';

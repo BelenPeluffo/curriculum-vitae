@@ -1,7 +1,7 @@
 import styles from "../../app.module.css";
 import PropTypes from "prop-types";
 
-const ContactItem = ({ icon, value, label, type }) => {
+const ContactItem = ({ icon, value, label, type, onClick }) => {
   console.log("type?", type);
   return (
     <div
@@ -11,7 +11,9 @@ const ContactItem = ({ icon, value, label, type }) => {
         gap: type == "personal" ? "0" : "16px",
         justifyContent: "center",
         flexDirection: type == "personal" ? "column" : "row",
+        cursor: 'pointer'
       }}
+      onclick={onClick}
       className={styles.contactItemText}
     >
       {!label ? (

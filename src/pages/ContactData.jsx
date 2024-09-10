@@ -1,6 +1,7 @@
 import styles from "../app.module.css";
 import { ContactItem } from "../components";
 import { motion } from "framer-motion";
+import { getClickHandler } from "@utils";
 
 const ContactData = ({ items }) => {
   return (
@@ -64,6 +65,7 @@ const ContactData = ({ items }) => {
                     value={item.data}
                     icon={item.icon}
                     type="contact"
+                    onClick={getClickHandler(item.contactType)}
                   />
                 ))
               : null}
